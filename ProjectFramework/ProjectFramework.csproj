@@ -1,0 +1,177 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">	
+	
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release;Chrome_Preprod;Firefox_Preprod</Configurations>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Galaxy_S20_Preprod'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\Galaxy_S20_Preprod\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Galaxy_S10_Preprod'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\Galaxy_S10_Preprod\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Chrome.Preprod'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\Chrome.Preprod\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+	
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Firefox.Preprod'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\Firefox.Preprod\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Iphone_12Pro_Preprod'">
+		<DebugSymbols>true</DebugSymbols>
+		<OutputPath>bin\Iphone_12Pro_Preprod\</OutputPath>
+		<DefineConstants>TRACE</DefineConstants>
+		<DebugType>pdbonly</DebugType>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<ErrorReport>prompt</ErrorReport>
+		<CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+  <ItemGroup>
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Addition.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Login - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Login.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Registration - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Registration-3 - Copy.feature.cs" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Registration-4 - Copy.feature.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="RestSharp" />
+    <None Remove="IdentityModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.12" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Polly" Version="7.2.2" />
+    <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
+    <PackageReference Include="Selenium.Support" Version="3.141.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="92.0.4515.10700" />
+    <PackageReference Include="SpecFlow" Version="3.9.22" />
+    <PackageReference Include="SpecFlow.Assist.Dynamic" Version="1.4.2" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.22" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.42" />
+    <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.22" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  
+	<None Update="appsettings.$(Configuration).json">
+		<DependentUpon>appsettings.json</DependentUpon>
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	 <None Update="appsettings.json">
+		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+	 <None Update="log4net.config">
+	   <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	 </None>
+	 <None Update="Resources\Preprod\BaseConfig.json">
+	   <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	 </None>
+	 <None Update="Resources\Test\BaseConfig.json">
+	   <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	 </None>
+		
+	  
+	 <PackageReference Include="RestSharp" Version="106.12.0" />
+	 <PackageReference Include="IdentityModel" Version="5.1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CoreFramework\CoreFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Features\Registration-2.feature.cs">
+      <DependentUpon>Registration-2.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\Registration-4.feature.cs">
+      <DependentUpon>Registration-4.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Features\SignIn.feature.cs">
+      <DependentUpon>SignIn.feature</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\AndroidProperties.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>AndroidProperties.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\iOSProperties.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>iOSProperties.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\AndroidProperties.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AndroidProperties.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\iOSProperties.resx">
+      <LastGenOutput>iOSProperties.Designer.cs</LastGenOutput>
+      <Generator>ResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SpecFlowFeatureFiles Update="Features\Registration-2.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\Registration-4.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\SignIn.feature">
+      <Visible>$(UsingMicrosoftNETSdk)</Visible>
+      <CodeBehindFile>%(RelativeDir)%(Filename).feature$(DefaultLanguageSourceExtension)</CodeBehindFile>
+    </SpecFlowFeatureFiles>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestResults\Screenshots\" />
+  </ItemGroup>
+</Project>
