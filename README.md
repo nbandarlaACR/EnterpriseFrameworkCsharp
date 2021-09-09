@@ -22,7 +22,7 @@ git clone https://github.com/nbandarlaACR/EnterpriseFrameworkCsharp.git
 
 ## **How Add Browser Configurations**
 1. Open Solution Configurations and select Configuration Manager
-2. Add New Configurtions in Project Configuration dropdown
+2. Add New Configurtions in ProjectFramework Configuration dropdown
 3. Add New Configurations in the Active Solution Configuration
 
 ![This is an image](/images/configurations.png)
@@ -45,4 +45,8 @@ cd <ProjectFrameworkDirectory>/TestResults livingdoc test-assembly <ProjectFrame
 ```
 cd C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\TestResults livingdoc test-assembly C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\ProjectFramework.dll -t C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\TestExecution.json
 ```
+6. Test Results will be generated with failed screenshots under the below path with the name Livindoc.html
+   - <ProjectFrameworkDirectory>/TestResults
 
+###### Example Reports
+![Example Reports](/images/example-reports.png)
