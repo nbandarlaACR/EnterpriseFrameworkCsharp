@@ -38,12 +38,16 @@ git clone https://github.com/nbandarlaACR/EnterpriseFrameworkCsharp.git
 > When the test execution is completed to view the test results, perform the below steps in the terminal window
 
 ```
-cd <ProjectFrameworkDirectory>/TestResults livingdoc test-assembly <ProjectFrameworkDirectory>\bin\Chrome_Preprod\netcoreapp.3.1\<ProjectName>.dll -t <ProjectFrameworkDirectory>\bin\Chrome_Preprod\netcoreapp.3.1\TestExecution.json
+cd <ProjectFrameworkDirectory>/TestResults
+
+livingdoc test-assembly <ProjectFrameworkDirectory>\bin\Chrome_Preprod\netcoreapp.3.1\<ProjectName>.dll -t <ProjectFrameworkDirectory>\bin\Chrome_Preprod\netcoreapp.3.1\TestExecution.json
 ```
 
 ###### Example
 ```
-cd C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\TestResults livingdoc test-assembly C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\ProjectFramework.dll -t C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\TestExecution.json
+cd C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\TestResults
+
+livingdoc test-assembly C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\ProjectFramework.dll -t C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\TestExecution.json
 ```
 6. Test Results will be generated with failed screenshots under the below path with the name Livindoc.html
    - <ProjectFrameworkDirectory>/TestResults
