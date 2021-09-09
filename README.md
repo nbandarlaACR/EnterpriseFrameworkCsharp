@@ -14,8 +14,8 @@ git clone https://github.com/nbandarlaACR/EnterpriseFrameworkCsharp.git
 3. Open EnterPriseFramework.sln with notepad and change the relevant project names with new desired project name
    - Please find below screenshots for reference to  replace ProjectFramework occcurances with new name
 
-###**From**
+###### **From**
 ![This is an image](/images/old_proj_name.png)
 
-###**To**
+###### **To**
 ![This is an image](/images/new_proj_name.png)
