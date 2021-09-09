@@ -13,5 +13,6 @@ git clone https://github.com/nbandarlaACR/EnterpriseFrameworkCsharp.git
    - Example : ProjectFramework to ABCProject
 3. Open EnterPriseFramework.sln with notepad and change the relevant project names with new desired project name
    - Example : Replace ProjectFramework occcurances with new name
-   ![This is an image] (/images/old_proj_name.png)
-   ![This is an image] (/images/new_proj_name.png)
+
+![This is an image](/images/old_proj_name.png)
+![This is an image](/images/new_proj_name.png)
