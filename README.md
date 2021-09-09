@@ -49,8 +49,8 @@ cd C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\TestResult
 
 livingdoc test-assembly C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\ProjectFramework.dll -t C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\TestExecution.json
 ```
-6. Test Results will be generated with failed screenshots under the below path with the name Livindoc.html
-   - <ProjectFrameworkDirectory>/TestResults
+> Test Results will be generated with failed screenshots under the below path with the name Livindoc.html
+>   <ProjectFrameworkDirectory>/TestResults
 
 ###### Example Reports
 ![Example Reports](/images/example-reports.png)
