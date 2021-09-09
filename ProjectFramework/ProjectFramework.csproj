@@ -58,7 +58,6 @@
 	</PropertyGroup>
 
   <ItemGroup>
-    <SpecFlowObsoleteCodeBehindFiles Remove="Features\Addition.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Login - Copy.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Login.feature.cs" />
     <SpecFlowObsoleteCodeBehindFiles Remove="Features\Registration - Copy.feature.cs" />

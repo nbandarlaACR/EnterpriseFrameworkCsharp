@@ -11,7 +11,7 @@ namespace CoreFramework.Hooks
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
         private static ScenarioContext _scenarioContext;
 
-        [BeforeTestRun(Order = -99)]
+        //[BeforeTestRun(Order = -99)]
         public static void BeforTestRun()
         {
             string customPattern = null;
@@ -32,7 +32,8 @@ namespace CoreFramework.Hooks
 
 
             }
-        [BeforeScenario(Order = -98)]
+
+        //[BeforeScenario(Order = -98)]
         public void BeforeScenario(ScenarioContext scenarioContext)
         {
             string customPattern = null;
@@ -40,7 +41,7 @@ namespace CoreFramework.Hooks
             log4net.LogicalThreadContext.Properties["customproperty"] = customPattern;
         }
         
-        [BeforeScenario(Order = -99)]
+        //[BeforeScenario(Order = -99)]
         public void FindScenarioTags(ScenarioContext scenarioContext)
         {
             scenarioContext.Add("scenarioTag", GetScenarioTag(scenarioContext));
