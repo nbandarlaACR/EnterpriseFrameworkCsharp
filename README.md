@@ -19,3 +19,30 @@ git clone https://github.com/nbandarlaACR/EnterpriseFrameworkCsharp.git
 
 ###### **To**
 ![This is an image](/images/new_proj_name.png)
+
+## **How Add Browser Configurations**
+1. Open Solution Configurations and select Configuration Manager
+2. Add New Configurtions in Project Configuration dropdown
+3. Add New Configurations in the Active Solution Configuration
+
+![This is an image](/images/configurations.png)
+
+## **How to Run the script**
+1. Provide Application URL in the appsettings.Chrome_Preprod.json
+2. Select the Chrome_Preprod from the solution Explorer
+3. Open Test Explorer
+4. Select the Test case
+5. Run
+
+## **How to view Test Results**
+> When the test execution is completed to view the test results, perform the below steps in the terminal window
+
+```
+cd <ProjectFrameworkDirectory>/TestResults livingdoc test-assembly <ProjectFrameworkDirectory>\bin\Chrome_Preprod\netcoreapp.3.1\<ProjectName>.dll -t <ProjectFrameworkDirectory>\bin\Chrome_Preprod\netcoreapp.3.1\TestExecution.json
+```
+
+###### Example
+```
+cd C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\TestResults livingdoc test-assembly C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\ProjectFramework.dll -t C:\SourceCode\main_repo\EnterpriseFrameworkCsharp\ProjectFramework\bin\Chrome_Preprod\netcoreapp3.1\TestExecution.json
+```
+
